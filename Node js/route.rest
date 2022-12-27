@@ -1,0 +1,70 @@
+Get http://localhost:3000/threads
+
+###//Hämtar en specifik tråd **klar
+
+Get http://localhost:3000/threads/6258eddc973b5c49ed98c4bf
+
+###Lägger till en tråd  ***klar**
+
+Post http://localhost:3000/threads 
+Content-Type: application/json 
+
+{
+   "title": "title3",
+    "content": "content3"
+}
+    
+
+
+### //Ta bort en post by id **klar 
+DELETE http://localhost:3000/threads/6258f816b8fd93e647afaa7b
+
+
+### Hämtar svar för en tråd  ???
+Get http://localhost:3000/threads/625eb886af3cd633222be129/replies
+
+
+### Lägger till ett svar i en tråd
+Post http://localhost:3000/threads/625eb886af3cd633222be129/replies
+Content-Type: application/json 
+
+{
+    
+    "name": "Ali",
+    "answerContent":"hello"
+} 
+
+### hämtar like >>>för mig
+get  http://localhost:3000/threads/625eb886af3cd633222be129/replies/625eb8eeaf3cd633222be130/like
+
+### Lägger till en like till ett svar ???
+post http://localhost:3000/threads/625eb886af3cd633222be129/replies/625eb8eeaf3cd633222be130/like
+
+
+
+### Ta bort en like till ett svar 
+delete http://localhost:3000/threads/625eb886af3cd633222be129/replies/625eb8eeaf3cd633222be130/like/625f0806077daf10e0449a44
+
+
+### delete svar 
+delete http://localhost:3000/threads/62569364e86b499d374e2e9d/replies
+
+### lägger user
+post http://localhost:3000/users
+Content-Type: application/json 
+
+{
+    "username": "yamama",
+    "password": "password"
+}
+
+
+### Hämter users
+get http://localhost:3000/users
+
+
+### Hämter en specifikuser
+get http://localhost:3000/users/624c3ab9109f27ce7e73ce59
+
+### Delete user
+delete http://localhost:3000/users/624c3ab9109f27ce7e73ce59
